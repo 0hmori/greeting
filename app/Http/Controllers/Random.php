@@ -6,10 +6,15 @@ use Illuminate\Http\Request;
 
 class Random extends Controller
 {
-    public function random() 
+    public function random()
     {
-        $ary = array("東京", "大阪", "北海道", "沖縄");
-        $key = array_rand($ary, 1);
-        return $ary[$key[1]];
+        $ary = array("おはよう", "こんにちは", "こんばんは", "おやすみ");
+        shuffle($ary);
+        return view('message.random', ['ary' => $ary[0]]);
     }
 }
+
+//$key = array_rand($ary, 1);
+//return view('message.random', ['key' => $key]);
+
+//return $ary[$key[1]];
