@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\Random;
+use App\Http\Controllers\RandomController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -41,4 +41,4 @@ Route::get('/comments/freeword/{msg}', function ($msg) {
 });
 
 //ランダムなメッセージ
-Route::get('/comments/random', [Random::class, 'random']);
+Route::get('/comments/random', [RandomController::class, 'random']);

@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class Random extends Controller
+class RandomController extends Controller
 {
     public function random()
     {
